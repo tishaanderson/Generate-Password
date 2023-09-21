@@ -5,12 +5,16 @@ var generateBtn = document.querySelector("#generate");
   function generatePassword(){
   // added the alert to the beginning of the password so users would know requirements immediately
     alert("Safe passwords include:: 1 lowercase letter, 1 uppercase letter, 1 number and 1 special character")
-  var length = parseInt(prompt("Enter password using 8 to 128 characters"));
+  var length = (prompt("Enter the length of characters you would like to use for your password ranging from 8 to 128 characters"));
 
     if (length < 8 || length > 128) {
-    alert("Invalid length");
+    alert("Invalid length! -- Must choose between 8-128 or Cancel");
     return;
     }
+
+// var characters = confirm("Would you like to include lowercase?")
+
+// include lowercase, uppercase, numeric, and/or special characters
 
   // included variables for all character requirements
   var useLowercase = confirm("Would you like to include lowercase characters?");
@@ -18,9 +22,9 @@ var generateBtn = document.querySelector("#generate");
   var useNumber = confirm("Would you like to include numberic characters?");
   var useSpecial = confirm("Would you like to include special characters?");
 
-    if (!useLowercase || !useUppercase || !useNumber || !useSpecial) {
-      alert("Please choose character types");
-      return;
+  if (!useLowercase && !useUppercase && !useNumber && !useSpecial) {
+    alert("Please choose at least one character type for your password");
+    return;
     }
 
   // set valid character options
@@ -29,15 +33,20 @@ var generateBtn = document.querySelector("#generate");
   var numberCharacter = "0123456789";
   var specialCharacter = "!@#$%^&*()_-+=<>?";
 
-  var allCharacters = lowercaseCharacter = uppercaseCharacter = numberCharacter = specialCharacter;
+  var allCharacters = ''
+  if (useLowercase) allCharacters += lowercaseCharacter;
+  if (useUppercase) allCharacters += uppercaseCharacter;
+  if (useNumber) allCharacters += numberCharacter;
+  if (useSpecial) allCharacters += specialCharacter;
+    
+  var generatedPassword = '';
 
+  for (var i = 0; i < length; i++) {
+    var randomIndex = Math.floor(Math.random() * allCharacters.length);
+    generatedPassword += allCharacters[randomIndex];
+  }
+  return generatedPassword;
 }
-
-
-
-// var characters = confirm("Would you like to include lowercase?")
-
-// include lowercase, uppercase, numeric, and/or special characters
 
 function writePassword() {
   var password = generatePassword();

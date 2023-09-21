@@ -37,3 +37,8 @@ THEN the password is either displayed in an alert or written to the page
 
 https://tishaanderson.github.io/Generate-Password/
 
+<<<<<<< HEAD
+=======
+[Deployed Page Preview:]
+![generate-password-screenshot](https://github.com/tishaanderson/Generate-Password/assets/136303804/05f524c5-84d0-4eb0-9618-a5239e1b3524)
+>>>>>>> 09b1d915362af06929d8a53de18f188749582a22

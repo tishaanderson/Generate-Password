@@ -2,6 +2,9 @@
 
 ## Description
 
+```
+Building a password generator that creates random passwords based on certain critia that the user choses within the prompts.
+
 ### User Story
 
 ```
@@ -32,6 +35,5 @@ THEN the password is either displayed in an alert or written to the page
 
 ##### Links
 
-INSERT LINK HERE BEFORE SUBMITTING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+https://tishaanderson.github.io/Generate-Password/
 
-[Deployed Page Preview::](generate-password-screenshot.png)

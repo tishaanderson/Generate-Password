@@ -34,4 +34,5 @@ THEN the password is either displayed in an alert or written to the page
 
 INSERT LINK HERE BEFORE SUBMITTING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-[Deployed Page Preview::](generate-password-screenshot.png)
+[Deployed Page Preview:]
+![generate-password-screenshot](https://github.com/tishaanderson/Generate-Password/assets/136303804/05f524c5-84d0-4eb0-9618-a5239e1b3524)
